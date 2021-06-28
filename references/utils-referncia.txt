@@ -1,0 +1,16 @@
+//Métodos Utilitarios para proyectos de Js
+
+//Obtener datos de un API o de un json
+export async function getData (url) 
+
+//Enviar datos en formato JSON a través de un API
+export async function sendData (url, data) 
+
+//función asíncrona de Esperar (equivalente a wait, en C3)
+export function sleep (ms) 
+
+//Desacomodar arreglos de objetos
+export function shuffle (array) 
+
+//Obtiene un númeor entero de forma aleatoria de un rango de números (min - max)
+export function getRandom (min, max) 

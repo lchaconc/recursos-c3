@@ -1,0 +1,53 @@
+	setPos (x,y) 
+	
+	getPos () 
+	
+//Manipulación de textos en las cajas de texto:
+	setText (txt) 
+	
+	getText () 
+	
+	setVisible (state) 
+	
+	getVisible () 
+	
+	setSize (h, w ) 
+	
+	getSize () 
+	
+	setAnimation (name) 
+	
+	getAnimation () 
+	
+	//"Saca" el elemento del layout para que no interfiera 
+	//con las interacciones del usuario:
+	outer () 
+	
+	//oculta los botones para colocarlos delante de una 
+	//imagen y simular que la imagen es el botón
+	hide ()
+	
+	//Variables de instancia:
+	setVar (name,val ) 
+	
+	getVar (name) 
+	
+	setAngle (degrees) 
+	
+	getAngle () 
+	
+	//posicion z en la capa
+	moveTop () 
+	
+	moveBottom () 
+	
+	//Destructor de objeto
+	destroy () 
+	
+	//Estilos para los botones
+	setStyle ({bg, font, color, border, bRadius}) 
+	
+	//Objeto runtime:
+	setRuntime (runtime) 
+	
+	getRuntime () 
