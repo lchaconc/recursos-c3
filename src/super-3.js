@@ -1,13 +1,17 @@
+/*
+* Super 3 
+* Versión: 1.2.2
+* Libraría utilitaria para C3
+*/
 
-//Alamcea el objeto runtime para poder ser urtilizado en los métodos de la clase
+//Almacea el objeto runtime para poder ser urtilizado en los métodos de la clase
 let rt;
 
 
 class S3 {
   
-	constructor(name) {	
+	constructor(name) {			
 		if (rt) {
-			this.name = name;
 			const objects = rt.objects[name];
 				if (objects) {
 					this.obj =  objects.getFirstPickedInstance();			
@@ -22,7 +26,7 @@ Debe revisar si escribió el nombre de forma correcta.`
 			if (name) {
 				console.error (`Objeto runtime no no definido en S3
 Debe llamar antes la función setRuntime`);
-			}
+			} 
 		}
     	
   	}
@@ -102,19 +106,21 @@ Debe llamar antes la función setRuntime`);
 		return this.obj.instVars[name];
 	}
 	
-	setAngle (degrees) {
+	//Establece el ángulo del objeto dado en grados para luego convertirlos en radianes:
+	setAngle (degrees) {		
 		const radians = degrees * Math.PI / 180;		
 		this.obj.angle= radians;
 	}
 	
-	getAngle () {
+	//Obtiene el ángulo del objeto en radianes par aluego devolver su valor en grados:
+	getAngle () {			
 		const radians = this.obj.angle;
 		const degrees = radians * 180 / Math.PI;
 		return degrees;
 	}
 	
 	//posicion z en la capa
-	moveTop () {
+	moveTop () {		
 		this.obj.moveToTop();				
 	}
 	
@@ -123,7 +129,7 @@ Debe llamar antes la función setRuntime`);
 	}
 	
 	//Destructor de objeto
-	destroy () {
+	destroy () {	
 		this.obj.destroy();
 	}	
 	
@@ -135,8 +141,9 @@ Debe llamar antes la función setRuntime`);
 		this.obj.setCssStyle ("border", border);
 		this.obj.setCssStyle ("border-radius", bRadius);
 	}
-	
-	//Objeto runtime:
+	/*   ------------------------------------- instancia s3 ---------------------------------------- */
+		 
+	//Objeto runtime: 
 	setRuntime (runtime) {
 		rt = runtime;
 		console.log("rt para la clase S3", rt);
@@ -146,6 +153,20 @@ Debe llamar antes la función setRuntime`);
 		return rt;		
 	}
 	
+	goTo(name) {
+		rt.goToLayout(name);
+	}
+	
+	//Obtiene el valor de varibles globales mediante runtime global vars
+	getGlobal (name) {		
+		return rt.globalVars[name];
+	}
+	
+	//Llama una función de "event sheet" meidant el objeto runtime
+	call (nameFunction) {		
+		rt.callFunction(nameFunction)
+	}
+	
 }
 
-export {S3};
+export default S3;
