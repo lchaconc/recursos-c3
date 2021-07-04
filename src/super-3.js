@@ -1,6 +1,6 @@
 /*
 * Super 3 
-* Versión: 1.2.2
+* Versión: 1.3.2
 * Libraría utilitaria para C3
 */
 
