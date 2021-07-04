@@ -166,6 +166,15 @@ Debe llamar antes la función setRuntime`);
 	call (nameFunction) {		
 		rt.callFunction(nameFunction)
 	}
+
+	//Devuelve el valor de una instancia de una varible por
+	//el nombre de un objeto
+	getIV ( item, name  ) {		
+		const objects =  rt.objects[item];
+		item = objects.getFirstPickedInstance();
+		return item.instVars[name];		
+		
+	}
 	
 }
 
