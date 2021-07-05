@@ -9,7 +9,7 @@ export async function getData (url) {
 }
 
 //Enviar datos en formato JSON a través de un API
-export async function sendData (url, data) {
+/*export async function sendData (url, data) {
   const resp = await fetch(url, {
     method: "POST",
     body: JSON.stringify(data),
@@ -20,6 +20,32 @@ export async function sendData (url, data) {
   let json= await resp.json();
     return json;
 };
+*/
+
+//Enviar datos en formato JSON a través de un API con ruta protegida mediante token
+async function sendData (URI, appToken, data) {       
+  const headers = new Headers({
+      "Authorization" : `Bearer ${appToken}`,
+      //'Content-Type': 'application/x-www-form-urlencoded',
+      "Content-Type": "application/json",
+      "X-Requested-With": XMLHttpRequest       
+  });
+  const req = new Request (URI, {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(data)    
+  })
+
+
+  const resp = await fetch (req);
+  const json = await resp.json();
+  console.log("Respuesta del servidor", json);
+return json;
+}
+
+
+
+
 
 //función asíncrona de Esperar (equivalente a wait, en C3)
 export function sleep (ms) {
