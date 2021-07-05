@@ -169,12 +169,37 @@ Debe llamar antes la función setRuntime`);
 
 	//Devuelve el valor de una instancia de una varible por
 	//el nombre de un objeto
-	getIV ( item, name  ) {		
+	getByName ( item, name  ) {		
 		const objects =  rt.objects[item];
 		item = objects.getFirstPickedInstance();
 		return item.instVars[name];		
 		
 	}
+	/*
+	Obtiene la instancia de un arreglo de instancias
+	por id (vairable de instancia)	
+	*/
+	getInstance (nameObject, id) {
+		console.log("id",id);
+		id = `"${id}"`;
+		
+		console.log  ( "colores", rt.objects[nameObject].getAllInstances() )
+		
+		const instances = rt.objects[nameObject].getAllInstances();
+		let instance;
+		instances.map((item, i)=> {
+		console.log ("id--->",  item.instVars.id );
+		console.log ("id", id);
+			
+			
+		if (item.instVars.id == id  ) {
+			instance = item;
+		}  
+	});
+		return instance;
+	}
+	
+
 	
 }
 
