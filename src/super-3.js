@@ -178,8 +178,9 @@ Debe llamar antes la función setRuntime`);
 	/*
 	Obtiene la instancia de un arreglo de instancias
 	por id (vairable de instancia)	
+	En este caso se obtiene la instancia de un objeto que no tien el foco
 	*/
-	getInstance (nameObject, id) {
+	getInstById (nameObject, id) {
 		console.log("id",id);
 		id = `"${id}"`;
 		
@@ -197,6 +198,23 @@ Debe llamar antes la función setRuntime`);
 		}  
 	});
 		return instance;
+	}
+	
+	/*
+	Obtiene el valor de la variable de instancia llamada "id" de un arreglo de objetos
+	En este caso debe tener el foco activo (estar seleccionado);
+	*/
+	getIdPicked (nameObject) {
+		const selected = rt.objects[nameObject].getFirstPickedInstance();	
+		console.log(seleccionado.instVars.id ) 
+	}
+	
+	/*
+	** Obtiene la instancia seleccionada de un array  
+	*/
+	getPicked (nameObject) {
+		const selected = rt.objects[nameObject].getFirstPickedInstance();
+		
 	}
 	
 
