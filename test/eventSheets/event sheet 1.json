@@ -33,7 +33,7 @@
 			"actions": [
 				{
 					"type": "script",
-					"script": "//obtenerColor ();\nmover();"
+					"script": "//obtenerColor ();\n//mover();\nobtenrUrl ()"
 				}
 			],
 			"sid": 147856404936405

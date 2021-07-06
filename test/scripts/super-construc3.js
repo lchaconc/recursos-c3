@@ -8,7 +8,12 @@ class S3 {
   	}
 
 	createRef (name) {
-		const obj = new SuperObject(name, this.rt );
+		const data= {
+			name, 
+			rt: this.rt,
+			ref: null
+		}
+		const obj = new SuperObject(data);
 		return obj;
 	}
 
@@ -66,7 +71,13 @@ class S3 {
 			instance = item;
 		}  
 	});
-		return instance;
+		const data= {
+			name: null, 
+			rt: null,
+			ref: instance
+		}
+		const obj = new SuperObject(data);
+		return obj;	
 	}
 	
 	/*
@@ -81,8 +92,13 @@ class S3 {
 	/*
 	** Obtiene la instancia seleccionada de un array  
 	*/
-	getPicked (nameObject) {			
-		const obj = new SuperObject(nameObject, this.rt );
+	getPicked (name) {
+		const data= {
+			name, 
+			rt: this.rt,
+			ref: null
+		}
+		const obj = new SuperObject(data);
 		return obj;	
 		
 	}

@@ -46,7 +46,8 @@
 					},
 					"uid": 3,
 					"instanceVariables": {
-						"id": "rojo"
+						"id": "rojo",
+						"url": "uno"
 					},
 					"behaviors": {},
 					"world": {
@@ -77,7 +78,8 @@
 					},
 					"uid": 4,
 					"instanceVariables": {
-						"id": "verde"
+						"id": "verde",
+						"url": "dos"
 					},
 					"behaviors": {},
 					"world": {

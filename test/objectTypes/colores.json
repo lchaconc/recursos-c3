@@ -9,6 +9,12 @@
 			"type": "string",
 			"desc": "",
 			"sid": 501728482466892
+		},
+		{
+			"name": "url",
+			"type": "string",
+			"desc": "",
+			"sid": 455739565719194
 		}
 	],
 	"behaviorTypes": [],

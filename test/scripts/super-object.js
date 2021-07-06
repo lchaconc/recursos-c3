@@ -10,8 +10,12 @@
 
 class SuperObject {
   
-	constructor(name, rt) {			
-		if (rt) {
+	constructor({name, rt, ref }) {			
+if (ref) {
+	//Rerencia de una instancia obtenida de un arreglo de instancias
+	this.obj = ref;
+} else {
+			if (rt) {
 			const objects = rt.objects[name];
 				if (objects) {
 					this.obj =  objects.getFirstPickedInstance();			
@@ -30,7 +34,8 @@ Debe llamar antes la función setRuntime`);
 				console.error("Debe proporcionar un nombre para el objeto");
 			}
 		}
-    	
+}	
+	
   	}
 	
   	setPos (x,y) {

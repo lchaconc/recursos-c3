@@ -35,5 +35,11 @@ export function cambiarTamano () {
 
 export function moverX () {
 	const rojo = s3.getInstById ("colores", "rojo");
-	rojo.x = 600;
+	rojo.setPos(400, 600);
 }
+
+export function obtenrUrl () {
+	const current =  s3.getPicked("colores");
+	console.log( current.getVar("url") );
+}
+
