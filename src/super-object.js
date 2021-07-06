@@ -5,12 +5,12 @@
 */
 
 //Almacea el objeto runtime para poder ser urtilizado en los métodos de la clase
-let rt;
 
 
-class S3 {
+
+class SuperObject {
   
-	constructor(name) {			
+	constructor(name, rt) {			
 		if (rt) {
 			const objects = rt.objects[name];
 				if (objects) {
@@ -24,9 +24,11 @@ Debe revisar si escribió el nombre de forma correcta.`
 		} else {			
 			//obteniendo elobjeto runtime			
 			if (name) {
-				console.error (`Objeto runtime no no definido en S3
+				console.error (`Objeto runtime no no definido en SuperObject
 Debe llamar antes la función setRuntime`);
-			} 
+			} else {
+				console.error("Debe proporcionar un nombre para el objeto");
+			}
 		}
     	
   	}
@@ -141,84 +143,8 @@ Debe llamar antes la función setRuntime`);
 		this.obj.setCssStyle ("border", border);
 		this.obj.setCssStyle ("border-radius", bRadius);
 	}
-	/*   ------------------------------------- instancia s3 ---------------------------------------- */
-		 
-	//Objeto runtime: 
-	setRuntime (runtime) {
-		rt = runtime;
-		console.log("rt para la clase S3", rt);
-	}
-	
-	getRuntime () {
-		return rt;		
-	}
-	
-	goTo(name) {
-		rt.goToLayout(name);
-	}
-	
-	//Obtiene el valor de varibles globales mediante runtime global vars
-	getGlobal (name) {		
-		return rt.globalVars[name];
-	}
-	
-	//Llama una función de "event sheet" meidant el objeto runtime
-	call (nameFunction) {		
-		rt.callFunction(nameFunction)
-	}
-
-	//Devuelve el valor de una instancia de una varible por
-	//el nombre de un objeto
-	getByName ( item, name  ) {		
-		const objects =  rt.objects[item];
-		item = objects.getFirstPickedInstance();
-		return item.instVars[name];		
-		
-	}
-	/*
-	Obtiene la instancia de un arreglo de instancias
-	por id (vairable de instancia)	
-	En este caso se obtiene la instancia de un objeto que no tien el foco
-	*/
-	getInstById (nameObject, id) {
-		console.log("id",id);
-		id = `"${id}"`;
-		
-		console.log  ( "colores", rt.objects[nameObject].getAllInstances() )
-		
-		const instances = rt.objects[nameObject].getAllInstances();
-		let instance;
-		instances.map((item, i)=> {
-		console.log ("id--->",  item.instVars.id );
-		console.log ("id", id);
-			
-			
-		if (item.instVars.id == id  ) {
-			instance = item;
-		}  
-	});
-		return instance;
-	}
-	
-	/*
-	Obtiene el valor de la variable de instancia llamada "id" de un arreglo de objetos
-	En este caso debe tener el foco activo (estar seleccionado);
-	*/
-	getIdPicked (nameObject) {
-		const selected = rt.objects[nameObject].getFirstPickedInstance();	
-		console.log(seleccionado.instVars.id ) 
-	}
-	
-	/*
-	** Obtiene la instancia seleccionada de un array  
-	*/
-	getPicked (nameObject) {
-		const selected = rt.objects[nameObject].getFirstPickedInstance();
-		
-	}
-	
 
 	
 }
 
-export default S3;
+export default SuperObject;

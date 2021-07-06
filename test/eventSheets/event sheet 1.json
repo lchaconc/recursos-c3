@@ -1,0 +1,60 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 277604262672722
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "setup (runtime)"
+				}
+			],
+			"sid": 930189278475583
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 174888977575283,
+					"parameters": {
+						"object": "colores"
+					}
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "//obtenerColor ();\nmover();"
+				}
+			],
+			"sid": 147856404936405
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "btn1",
+					"sid": 416022956792871
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "//cambiarTamano()\nmoverX ()"
+				}
+			],
+			"sid": 221198812149213
+		}
+	],
+	"sid": 102641928765849
+}
