@@ -1,3 +1,9 @@
+/*
+ * Super 3
+ * Versión: 1.3.2
+ * Libraría utilitaria para C3
+ */
+
 import SuperObject from "./super-object.js";
 
 class S3 {
@@ -47,16 +53,12 @@ class S3 {
 	En este caso se obtiene la instancia de un objeto que no tien el foco
 	*/
   getInstById(nameObject, id) {
-    console.log("id", id);
-    //id = `"${id}"`;
-
-    console.log("colores", this.rt.objects[nameObject].getAllInstances());
-
+    
     const instances = this.rt.objects[nameObject].getAllInstances();
     let instance;
     instances.map((item, i) => {
-      console.log("id--->", item.instVars.id);
-      console.log("id", id);
+      //console.log("id--->", item.instVars.id);
+      //console.log("id", id);
 
       if (item.instVars.id == id) {
         instance = item;
