@@ -29,6 +29,14 @@
 			"author": "Scirra",
 			"version": "r251.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"version": "r251.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "t1b66abi3eu",
@@ -37,7 +45,8 @@
 			"btn1",
 			"colores",
 			"Touch",
-			"lapiz"
+			"lapiz",
+			"btnTest"
 		],
 		"subfolders": []
 	},

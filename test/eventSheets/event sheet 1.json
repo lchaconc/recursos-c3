@@ -54,6 +54,23 @@
 				}
 			],
 			"sid": 221198812149213
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "btnTest",
+					"sid": 653145756378094
+				}
+			],
+			"actions": [
+				{
+					"type": "script",
+					"script": "console.log (runtime.objects.colores.getFirstPickedInstance() );\nconst aux = runtime.objects.colores.getFirstPickedInstance();\naux.angleDegrees = 45;\naux.zElevation = 2;"
+				}
+			],
+			"sid": 856666265422999
 		}
 	],
 	"sid": 102641928765849

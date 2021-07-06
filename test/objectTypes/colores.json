@@ -17,7 +17,13 @@
 			"sid": 455739565719194
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 843201252722406
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

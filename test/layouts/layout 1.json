@@ -21,8 +21,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 199,
-						"y": 306,
+						"x": 127,
+						"y": 197,
 						"width": 72,
 						"height": 24,
 						"originX": 0,
@@ -49,7 +49,14 @@
 						"id": "rojo",
 						"url": "uno"
 					},
-					"behaviors": {},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						}
+					},
 					"world": {
 						"x": 153,
 						"y": 123,
@@ -81,7 +88,14 @@
 						"id": "verde",
 						"url": "dos"
 					},
-					"behaviors": {},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						}
+					},
 					"world": {
 						"x": 268,
 						"y": 122,
@@ -126,6 +140,36 @@
 						],
 						"angle": 0,
 						"zElevation": 0
+					}
+				},
+				{
+					"type": "btnTest",
+					"properties": {
+						"type": "button",
+						"text": "Test",
+						"tooltip": "",
+						"initially-visible": true,
+						"enabled": true,
+						"auto-font-size": true,
+						"checked": false,
+						"id": ""
+					},
+					"uid": 7,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 270,
+						"y": 369,
+						"width": 72,
+						"height": 24,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
 					}
 				}
 			],
