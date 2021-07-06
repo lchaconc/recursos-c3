@@ -1,6 +1,6 @@
 /*
-* Super 3 
-* Versión: 1.3.2
+* Super object 3 
+* Versión: 3.0.1
 * Libraría utilitaria para C3
 */
 

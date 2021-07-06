@@ -1,6 +1,6 @@
-import SuperObject from "./super-object";
+import SuperObject from "./super-object.js";
 
-class Super3 {
+class S3 {
 
 
 	constructor(runtime) {			
@@ -8,7 +8,8 @@ class Super3 {
   	}
 
 	createRef (name) {
-		const obj = new SuperObject(name);
+		const obj = new SuperObject(name, this.rt );
+		return obj;
 	}
 
 
@@ -50,9 +51,9 @@ class Super3 {
 	*/
 	getInstById (nameObject, id) {
 		console.log("id",id);
-		id = `"${id}"`;
+		//id = `"${id}"`;
 		
-		console.log  ( "colores", rt.objects[nameObject].getAllInstances() )
+		console.log  ( "colores", this.rt.objects[nameObject].getAllInstances() )
 		
 		const instances = this.rt.objects[nameObject].getAllInstances();
 		let instance;
@@ -80,13 +81,13 @@ class Super3 {
 	/*
 	** Obtiene la instancia seleccionada de un array  
 	*/
-	getPicked (nameObject) {		
-		const selected =  this.rt.objects[nameObject].getFirstPickedInstance();
-		return selected;
+	getPicked (nameObject) {			
+		const obj = new SuperObject(nameObject, this.rt );
+		return obj;	
 		
 	}
 	
 	}
 
 
-export default SR;
+export default S3;
